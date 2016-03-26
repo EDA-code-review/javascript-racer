@@ -3,31 +3,33 @@
     <head>
         <title>Speed Racer</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
         <link type="text/css" rel="stylesheet" href="racer.css">
         <script src="racer.js"></script>
     </head>
 
     <body>
+        <div class="heading"><h1>Battle of the Belchers</h1></div>
+        <div class='instructions'>
+            <h4>Tina uses 'z', Bob uses 'm'</h4>
+        </div>
+
         <table class="racer-table">
             <tr id="lane1">
                 <td class="active"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="finish"></td>
             </tr>
             <tr id="lane2">
                 <td class="active"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="finish"></td>
             </tr>
         </table>
+
+
+        <div>
+            <p id="tina_wins"></p>
+        </div>
+        <div>
+            <p id="bob_wins"></p>
+        </div>
+
     </body>
 </html>

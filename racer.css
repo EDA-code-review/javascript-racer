@@ -1,17 +1,32 @@
+.body {
+    text-align: center;
+    margin: auto;
+}
+
+.heading {
+    margin: auto;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+.instructions {
+    margin: auto;
+    text-align: center;
+}
 
 .racer-table {
-    margin-top: 100px;
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    height: 400px;
-    width: 600px;
+    margin-bottom: 40px;
     border: 2px solid #dcdcdc;
 }
 
-.racer-table td{
+.racer-table td {
     background-color: #fff;
-    width: 30px;
-    border: 1px solid red;
+    width: 100px;
+    height: 200px;
 
 }
 
@@ -30,7 +45,13 @@
 }
 
 td.finish {
-    background: url("http://www.clker.com/cliparts/3/b/9/9/11949893441012132368pattern-checkers-1.svg.hi.png");
+    background: url("checkflag.png");
     background-size: cover;
     opacity: 0.8;
+}
+
+#tina_wins, #bob_wins{
+    margin: auto;
+    font-size: 40px;
+    text-align: center;
 }
