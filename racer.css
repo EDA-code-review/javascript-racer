@@ -1,0 +1,36 @@
+
+.racer-table {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 600px;
+    border: 2px solid #dcdcdc;
+}
+
+.racer-table td{
+    background-color: #fff;
+    width: 30px;
+    border: 1px solid red;
+
+}
+
+.racer-table tr {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#lane1 td.active {
+    background: url("tina.jpg");
+    background-size: cover;
+}
+
+#lane2 td.active {
+    background: url("bob.jpg");
+    background-size: cover;
+}
+
+td.finish {
+    background: url("http://www.clker.com/cliparts/3/b/9/9/11949893441012132368pattern-checkers-1.svg.hi.png");
+    background-size: cover;
+    opacity: 0.8;
+}
