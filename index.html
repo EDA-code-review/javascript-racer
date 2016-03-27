@@ -11,26 +11,28 @@
     </head>
 
     <body>
-        <div class="heading"><h1>Battle of the Belchers</h1></div>
-        <div class='instructions'>
-            <h4>Tina uses 'z', Bob uses 'm'</h4>
-        </div>
+        <div class="container">
+            <div class="heading"><h1>Battle of the Belchers</h1></div>
+            <div class='instructions'>
+                <h4>Tina uses 'z', Bob uses 'm'</h4>
+            </div>
+            <button class="hidden" id="restart" type="reset">PLAY AGAIN?</button>
+            <table class="racer-table">
+                <tr id="lane1">
+                    <td class="active"></td>
+                </tr>
+                <tr id="lane2">
+                    <td class="active"></td>
+                </tr>
+            </table>
 
-        <table class="racer-table">
-            <tr id="lane1">
-                <td class="active"></td>
-            </tr>
-            <tr id="lane2">
-                <td class="active"></td>
-            </tr>
-        </table>
 
-
-        <div>
-            <p id="tina_wins"></p>
-        </div>
-        <div>
-            <p id="bob_wins"></p>
+            <div>
+                <p class="hidden" id="tina_wins">Uhhhhhhhh Tina wins! You get all the butts.</p>
+            </div>
+            <div>
+                <p class="hidden" id="bob_wins">Ohh my god!! Bob wins!</p>
+            </div>
         </div>
 
     </body>
