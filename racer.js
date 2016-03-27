@@ -27,6 +27,8 @@ var p2 = 0
 var tinaWins = document.getElementById('tina_wins')
 var bobWins = document.getElementById('bob_wins')
 
+var button = document.getElementById('restart')
+
 document.addEventListener('keyup', choosePlayer)
 
 
@@ -35,16 +37,17 @@ function choosePlayer() {
         updatePlayerPosition(player1, p1)
         p1++
         if (player1[tracklength].className === "active") {
-            tinaWins.innerHTML = "Uhhhhhhh Tina wins! You get all the butts."
-            document.removeEventListener('keyup', choosePlayer)
+            tinaWins.className = ''
+            endGame()
+
         }
     }
     else if (event.which === 77) {
         updatePlayerPosition(player2, p2)
         p2++
         if (player2[tracklength].className === "active") {
-            bobWins.innerHTML = "Oh my god! Bob wins!"
-            document.removeEventListener('keyup', choosePlayer)
+            bobWins.className = ''
+            endGame()
         }
     }
 }
@@ -56,4 +59,26 @@ function updatePlayerPosition(player, p) {
     }
 }
 
+function endGame() {
+    document.removeEventListener('keyup', choosePlayer)
+    button.className = ''
+    button.addEventListener('click', restart)
+}
+
+function restart() {
+    for (var i = 0; i < tracklength; i++) {
+        player1[i].className = ''
+        player2[i].className = ''
+    }
+    player1[0].className = 'active'
+    player1[tracklength].className = 'finish'
+    player2[0].className = 'active'
+    player2[tracklength].className = 'finish'
+    button.className = 'hidden'
+    bobWins.className = 'hidden'
+    tinaWins.className = 'hidden'
+    document.addEventListener('keyup', choosePlayer)
+    p1 = 0;
+    p2 = 0;
+}
 })
