@@ -31,8 +31,9 @@ var button = document.getElementById('restart')
 
 document.addEventListener('keyup', choosePlayer)
 
-
+// >>> function name not entirely clear. this is an event handler by the looks. could be "inputHandler"? 
 function choosePlayer() {
+// <<<<
     if (event.which === 90) {
         updatePlayerPosition(player1, p1)
         p1++
@@ -45,13 +46,16 @@ function choosePlayer() {
     else if (event.which === 77) {
         updatePlayerPosition(player2, p2)
         p2++
+        // >>>> this code is used twice - looks like you could pull this out into another function
         if (player2[tracklength].className === "active") {
             bobWins.className = ''
             endGame()
         }
+        // <<<<
     }
 }
 
+// nice
 function updatePlayerPosition(player, p) {
     if (player[p].className === "active") {
         player[p].className = ""
